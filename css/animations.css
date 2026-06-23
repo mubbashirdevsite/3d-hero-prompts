@@ -1,0 +1,67 @@
+/* ═══════════════════════════════════════════
+   animations.css — All keyframes & transitions
+   3D Web Prompts
+═══════════════════════════════════════════ */
+
+/* ── SCROLL HINT BOBBLE ── */
+@keyframes bobble {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
+}
+.scroll-hint { animation: bobble 2s ease-in-out infinite; }
+
+/* ── ORB DRIFT ── */
+@keyframes drift {
+  0%, 100% { transform: translate(0, 0); }
+  33%       { transform: translate(30px, -20px); }
+  66%       { transform: translate(-20px, 30px); }
+}
+.orb-1 { animation: drift 12s ease-in-out infinite;      animation-delay: 0s;  }
+.orb-2 { animation: drift 12s ease-in-out infinite;      animation-delay: -4s; }
+.orb-3 { animation: drift 12s ease-in-out infinite;      animation-delay: -8s; }
+
+/* ── FADE IN UP (page load) ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+.hero-eyebrow { animation: fadeInUp 0.6s ease both; animation-delay: 0.1s; }
+.hero h1      { animation: fadeInUp 0.6s ease both; animation-delay: 0.2s; }
+.hero p       { animation: fadeInUp 0.6s ease both; animation-delay: 0.35s; }
+.hero-actions { animation: fadeInUp 0.6s ease both; animation-delay: 0.5s; }
+
+/* ── CARD SHIMMER ON HOVER ── */
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/* ── SCROLL-REVEAL (JS adds .reveal class) ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── COPY SUCCESS PULSE ── */
+@keyframes successPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(109, 250, 204, 0.4); }
+  70%  { box-shadow: 0 0 0 8px rgba(109, 250, 204, 0);  }
+  100% { box-shadow: 0 0 0 0 rgba(109, 250, 204, 0);   }
+}
+.copy-btn.copied { animation: successPulse 0.6s ease; }
+
+/* ── REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

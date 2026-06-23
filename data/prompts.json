@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "tag": "tag-three",
+    "tagLabel": "Three.js",
+    "title": "Floating particle galaxy",
+    "desc": "Thousands of particles forming a swirling galaxy with mouse-reactive depth and bloom glow.",
+    "prompt": "Build a full-viewport Three.js hero section with:\n- 8,000 particles in a galaxy spiral (3 arms)\n- Depth-based size and opacity (parallax feel)\n- Mouse move rotates the camera slightly (lerped)\n- Soft purple/blue color gradient across arms\n- requestAnimationFrame loop, auto-resize\n- Cap renderer.setPixelRatio at 2\n- Reduced-motion: pause rotation if prefers-reduced-motion"
+  },
+  {
+    "id": 2,
+    "tag": "tag-three",
+    "tagLabel": "Three.js",
+    "title": "Morphing blob geometry",
+    "desc": "An organic sphere that breathes and morphs using Perlin noise displacement on vertices.",
+    "prompt": "Create a Three.js animated blob hero in a single HTML file:\n- IcosahedronGeometry (detail 6) with vertex displacement\n- Perlin/simplex noise applied to each vertex per frame\n- Iridescent MeshPhysicalMaterial (transmission, roughness 0.1)\n- 3-point HDRI-style lighting rig\n- Subtle mouse-tracking rotation (lerp factor 0.05)\n- Black background, bloom post-processing via UnrealBloomPass\n- Mobile: halve geometry detail on screens < 768px"
+  },
+  {
+    "id": 3,
+    "tag": "tag-three",
+    "tagLabel": "Three.js",
+    "title": "Scroll-driven 3D tunnel",
+    "desc": "A neon tunnel that the camera flies through as the user scrolls down the page.",
+    "prompt": "Build a scroll-driven Three.js tunnel hero:\n- TubeGeometry along a CatmullRom curve (50 points, radius 2)\n- Camera position mapped to window.scrollY (0 → end of tube)\n- Neon grid texture on tube interior (ShaderMaterial)\n- Emissive glow rings every 10 units along the tube\n- Page content layered above canvas with mix-blend-mode\n- Pause animation when tab is hidden (visibilitychange)\n- Works from 320px to 2560px wide"
+  },
+  {
+    "id": 4,
+    "tag": "tag-css",
+    "tagLabel": "CSS 3D",
+    "title": "CSS perspective card stack",
+    "desc": "Layered cards that fan out and lift on hover using pure CSS perspective transforms.",
+    "prompt": "Build a pure-CSS 3D card-stack hero section:\n- 5 stacked cards with translateZ, rotateX, rotateY offsets\n- Hover on the stack fans cards out in 3D space (CSS transitions 0.5s ease)\n- Each card has a glassmorphism surface (backdrop-filter blur)\n- Perspective 1200px set on the parent container\n- transform-style: preserve-3d throughout\n- Responsive: flatten to 2D on prefers-reduced-motion\n- No JavaScript required"
+  },
+  {
+    "id": 5,
+    "tag": "tag-css",
+    "tagLabel": "CSS 3D",
+    "title": "3D text extrusion hero",
+    "desc": "Headline text with a CSS 3D extrusion effect that reacts to mouse position.",
+    "prompt": "Create a CSS 3D extruded-text hero:\n- Headline text with 20 layered text-shadows simulating extrusion depth\n- Mouse move updates CSS custom properties --rx and --ry\n- The text block rotates via rotateX(var(--rx)) rotateY(var(--ry))\n- Extrusion colour is 30% darker than the face colour\n- Smooth perspective tilt (lerp in requestAnimationFrame)\n- Font: system-ui or a single Google Font import\n- Reduced-motion: disable tilt, keep static extrusion"
+  },
+  {
+    "id": 6,
+    "tag": "tag-canvas",
+    "tagLabel": "Canvas 2D",
+    "title": "Interactive fluid simulation",
+    "desc": "Silky fluid that ripples and splashes wherever the cursor moves using 2D canvas.",
+    "prompt": "Implement a 2D canvas fluid-ripple hero background:\n- Grid of velocity/density cells (128×128 resolution)\n- Mouse drag injects dye and velocity into the field\n- Advection + diffusion solved each frame (Jos Stam-style)\n- Render cells as coloured rectangles scaled to viewport\n- 60 fps locked with requestAnimationFrame + delta capping\n- Purple → teal colour map for density values\n- Mobile: respond to touchmove events instead of mousemove"
+  },
+  {
+    "id": 7,
+    "tag": "tag-canvas",
+    "tagLabel": "Canvas 2D",
+    "title": "Generative wave landscape",
+    "desc": "Stacked sine-wave mountain ridges in a looping canvas animation.",
+    "prompt": "Build a canvas 2D animated landscape hero:\n- 6 layered sine-wave ridgelines, each with different frequency/amplitude/speed\n- Ridges filled with semi-transparent gradients (dark purple at top → transparent)\n- Ridges scroll horizontally at different speeds (parallax depth)\n- Stars layer: 200 static dots with twinkle opacity animation\n- Entire scene loops seamlessly (x offset wraps at wave repeat width)\n- Add a subtle radial gradient moon/sun behind the ridges\n- requestAnimationFrame loop, canvas fills 100vw × 100vh"
+  },
+  {
+    "id": 8,
+    "tag": "tag-spline",
+    "tagLabel": "Spline",
+    "title": "Embed a Spline 3D scene",
+    "desc": "Load a Spline scene via the runtime SDK and sync it with scroll or cursor.",
+    "prompt": "Show me how to embed a Spline 3D scene as a hero section:\n- Import @splinetool/runtime via CDN\n- Load a scene URL into a full-viewport <canvas>\n- Map window.scrollY to a Spline variable named \"scrollProgress\"\n- Map mousemove to Spline variables \"mouseX\" and \"mouseY\"\n- Show a loading skeleton until the scene is ready\n- Make the canvas position: fixed behind page content\n- Include a fallback static image for browsers without WebGL"
+  },
+  {
+    "id": 9,
+    "tag": "tag-gsap",
+    "tagLabel": "GSAP",
+    "title": "GSAP ScrollTrigger 3D reveal",
+    "desc": "Section elements fly in from 3D space as the user scrolls, orchestrated by GSAP.",
+    "prompt": "Build a GSAP ScrollTrigger hero with 3D reveals:\n- Hero headline splits into words, each flies in from rotateX(90deg) → 0\n- Sub-heading fades from opacity 0 + translateZ(-80px) → normal\n- CTA button scales from 0.6 → 1 with a spring ease\n- A background mesh (SVG or canvas) parallaxes at 30% scroll speed\n- Use gsap.registerPlugin(ScrollTrigger) from CDN\n- All animations use perspective on the parent (1000px)\n- Stagger word reveals by 0.06s each"
+  },
+  {
+    "id": 10,
+    "tag": "tag-three",
+    "tagLabel": "Three.js",
+    "title": "Holographic product display",
+    "desc": "A rotating 3D object with a holographic shader, grid lines, and scan animation.",
+    "prompt": "Build a Three.js holographic product-display hero:\n- Load a GLB model (or use a TorusKnotGeometry as placeholder)\n- Custom ShaderMaterial with:\n    • Fresnel edge glow (rim lighting)\n    • Horizontal scan-line animation moving upward\n    • Grid overlay in UV space\n    • Iridescent colour shift based on view angle\n- Model rotates slowly on Y axis\n- Click/drag to orbit (OrbitControls, damping enabled)\n- Dark background with a faint circular ground shadow\n- Export as a single HTML file with CDN imports"
+  },
+  {
+    "id": 11,
+    "tag": "tag-css",
+    "tagLabel": "CSS 3D",
+    "title": "Infinite 3D logo cube",
+    "desc": "A CSS cube rotating in 3D with each face showing a different brand asset or gradient.",
+    "prompt": "Create a CSS 3D rotating cube logo hero:\n- A cube with 6 faces, each a different gradient or brand colour\n- Auto-rotates on X and Y axes simultaneously (CSS @keyframes)\n- Face labels (\"About\", \"Work\", \"Contact\", etc.) centred on each face\n- Hover pauses rotation and highlights the nearest face\n- Cube size: 160px on desktop, 100px on mobile\n- transform-style: preserve-3d, perspective: 600px on wrapper\n- Clicking a face dispatches a custom event with the face label"
+  },
+  {
+    "id": 12,
+    "tag": "tag-canvas",
+    "tagLabel": "Canvas 2D",
+    "title": "Matrix rain with custom glyphs",
+    "desc": "The classic falling-code rain, customised with your own characters and colours.",
+    "prompt": "Create a canvas Matrix-rain hero background:\n- Columns of falling characters (mix of katakana + Latin + digits)\n- Each column has random speed (1–3 cells/frame) and start delay\n- Lead character is bright white; trail fades to your accent colour\n- Background: black with 0.05 alpha fill each frame (motion blur effect)\n- Font: monospace 14px\n- On mousemove, columns near cursor temporarily turn accent2 colour\n- Add a CSS overlay gradient (transparent → bg colour) at the bottom"
+  }
+]

@@ -1,0 +1,92 @@
+/* ═══════════════════════════════════════════
+   responsive.css — All breakpoints
+   3D Web Prompts
+═══════════════════════════════════════════ */
+
+/* ── TABLET (≤ 1024px) ── */
+@media (max-width: 1024px) {
+  .section { padding: 64px 32px; }
+
+  .prompt-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
+/* ── MOBILE (≤ 768px) ── */
+@media (max-width: 768px) {
+  /* Nav */
+  nav {
+    padding: 16px 20px;
+  }
+  nav ul {
+    display: none; /* hidden on mobile — can add hamburger via JS */
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: 72px;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  .btn-primary,
+  .btn-ghost {
+    width: 100%;
+    max-width: 280px;
+    text-align: center;
+  }
+
+  /* Sections */
+  .section {
+    padding: 56px 20px;
+  }
+  .section-sub {
+    font-size: 15px;
+    margin-bottom: 36px;
+  }
+
+  /* Grids */
+  .prompt-grid {
+    grid-template-columns: 1fr;
+  }
+  .how-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Footer */
+  footer {
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+    padding: 24px 20px;
+  }
+
+  /* Orbs — shrink on mobile to reduce paint cost */
+  .orb-1 { width: 300px; height: 300px; }
+  .orb-2 { width: 240px; height: 240px; }
+  .orb-3 { width: 180px; height: 180px; }
+}
+
+/* ── SMALL MOBILE (≤ 480px) ── */
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: clamp(36px, 12vw, 56px);
+  }
+  .card-prompt {
+    font-size: 11px;
+  }
+  .how-step {
+    padding: 24px 20px;
+  }
+}
+
+/* ── WIDE SCREENS (≥ 1440px) ── */
+@media (min-width: 1440px) {
+  .section {
+    padding: 100px 64px;
+  }
+  .prompt-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

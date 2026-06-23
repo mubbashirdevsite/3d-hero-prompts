@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D Web Prompts — Build Stunning 3D Sites</title>
+  <meta name="description" content="Ready-to-use prompts for Three.js, CSS 3D, Canvas, Spline, and GSAP. Copy a prompt, paste it into Claude or ChatGPT, and ship your 3D hero in minutes.">
+
+  <!-- Stylesheets (order matters) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Background particle canvas -->
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient CSS orbs -->
+  <div class="orb orb-1" aria-hidden="true"></div>
+  <div class="orb orb-2" aria-hidden="true"></div>
+  <div class="orb orb-3" aria-hidden="true"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav>
+    <a href="#" class="logo">3D<span>.</span>prompts</a>
+    <ul>
+      <li><a href="#prompts">Prompts</a></li>
+      <li><a href="#how">How to use</a></li>
+      <li><a href="#tips">Tips</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <div class="hero-eyebrow">Copy · Paste · Build</div>
+    <h1>
+      <span class="line1">Build stunning</span>
+      <span class="line2">3D websites</span>
+    </h1>
+    <p>Ready-to-use prompts for Three.js, CSS 3D, Canvas, Spline, and GSAP. Copy a prompt, paste it into Claude or ChatGPT, and ship your 3D hero in minutes.</p>
+    <div class="hero-actions">
+      <a href="#prompts" class="btn-primary">Browse Prompts</a>
+      <a href="#how"     class="btn-ghost">How it works</a>
+    </div>
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+        <path d="M8 3v10M4 9l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Scroll
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ── PROMPTS ── -->
+  <section class="section" id="prompts">
+    <div class="section-label">Ready-made prompts</div>
+    <h2 class="section-title">Pick your effect, copy the prompt</h2>
+    <p class="section-sub">Each prompt is engineered to produce production-ready 3D code. Paste directly into any AI assistant.</p>
+
+    <!-- Cards injected by prompts.js -->
+    <div class="prompt-grid" id="prompt-grid"></div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ── HOW IT WORKS ── -->
+  <section class="section" id="how">
+    <div class="section-label">Workflow</div>
+    <h2 class="section-title">Three steps to a 3D site</h2>
+    <p class="section-sub">No prior experience with Three.js or WebGL required. AI does the heavy lifting.</p>
+
+    <div class="how-grid">
+      <div class="how-step reveal">
+        <div class="step-num">01</div>
+        <div class="step-title">Pick a prompt</div>
+        <div class="step-desc">Choose an effect that matches your site's vibe — particles, morphing geometry, scroll-driven 3D, or pure CSS depth.</div>
+      </div>
+      <div class="how-step reveal">
+        <div class="step-num">02</div>
+        <div class="step-title">Paste &amp; customise</div>
+        <div class="step-desc">Drop the prompt into Claude or ChatGPT. Append your brand colours, headline copy, and any layout constraints.</div>
+      </div>
+      <div class="how-step reveal">
+        <div class="step-num">03</div>
+        <div class="step-title">Drop into your site</div>
+        <div class="step-desc">The AI returns a self-contained HTML/JS file. Drop it straight into your project or an iframe and you're live.</div>
+      </div>
+      <div class="how-step reveal">
+        <div class="step-num">04</div>
+        <div class="step-title">Iterate fast</div>
+        <div class="step-desc">Don't like the colours or speed? Ask the AI to adjust in a follow-up. No rebuilding from scratch every time.</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ── PRO TIPS ── -->
+  <section class="section" id="tips">
+    <div class="section-label">Pro tips</div>
+    <h2 class="section-title">Get better results</h2>
+
+    <div class="prompt-grid">
+      <div class="prompt-card reveal">
+        <div class="card-tag tag-three">Performance</div>
+        <div class="card-title">Always set a pixel ratio cap</div>
+        <div class="card-desc">Add "cap devicePixelRatio at 2 for performance" to any Three.js prompt. High-DPI displays can halve your frame rate on heavy scenes.</div>
+      </div>
+      <div class="prompt-card reveal">
+        <div class="card-tag tag-css">Accessibility</div>
+        <div class="card-title">Request a reduced-motion fallback</div>
+        <div class="card-desc">Append "add a prefers-reduced-motion media query that stops all animation" to every prompt to avoid excluding users.</div>
+      </div>
+      <div class="prompt-card reveal">
+        <div class="card-tag tag-canvas">Mobile</div>
+        <div class="card-title">Ask for mobile particle reduction</div>
+        <div class="card-desc">Add "halve particle count on screens narrower than 768 px" — mobile GPUs can't handle the same density as desktop.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-logo">3D<span>.</span>prompts</div>
+    <div>Copy prompts freely — no attribution needed</div>
+  </footer>
+
+  <!-- ── SCRIPTS (bottom of body = no render blocking) ── -->
+  <script src="js/script.js"></script>
+  <script src="js/prompts.js"></script>
+  <script src="js/particles.js"></script>
+
+</body>
+</html>
